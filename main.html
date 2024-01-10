@@ -9,7 +9,19 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+			if((arr.length<=1) || arr[1] == arr[2]){
+				return -Infinity;
+			}
+			sortArr = arr.sort();
+			//console.log(sortArr);
+			if(arr[1]<0){
+				sortArr.shift();
+				return arr[0];
+			}
+			sortArr.pop()
+			//console.log(sortArr)
+			return sortArr[sortArr.length-1]
+
 			
 		}
 
